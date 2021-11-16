@@ -1,0 +1,11 @@
+image: node:14.7.0
+
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Build
+          script:
+            - echo "Start build"
+            - yarn
+            - yarn build
