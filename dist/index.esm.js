@@ -4138,9 +4138,9 @@ var templateObject_1$Q, templateObject_2$k, templateObject_3$a, templateObject_4
 
 keyframes(templateObject_1$R || (templateObject_1$R = __makeTemplateObject(["\n  0%,\n  100% {\n    background-position: 0 0;\n  }\n  50% {\n    background-position: 100% 0;\n  }\n"], ["\n  0%,\n  100% {\n    background-position: 0 0;\n  }\n  50% {\n    background-position: 100% 0;\n  }\n"])));
 var LinkLabel = styled.div(templateObject_2$l || (templateObject_2$l = __makeTemplateObject(["\n  opacity: 0.9;\n  color: #fff;\n  transition: color 0.4s;\n  flex-grow: 1;\n"], ["\n  opacity: 0.9;\n  color: #fff;\n  transition: color 0.4s;\n  flex-grow: 1;\n"])));
-var MenuEntry = styled.div(templateObject_3$b || (templateObject_3$b = __makeTemplateObject(["\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  height: ", "px;\n  padding: ", ";\n  font-family: Poppins;\n  font-style: normal;\n  font-size: 18px;\n  line-height: ", "px;\n  background-color: ", ";\n  // box-shadow: ", ";\n\n  &:before {\n    content: \"\";\n    position: absolute;\n    left: 0;\n    height: inherit;\n    width: 6px;\n    background-color: ", ";\n  }\n\n  a {\n    display: flex;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n  svg {\n    fill: ", ";\n    margin: 0 22px 0 24px;\n  }\n\n  &:hover {\n    color: #657eec;\n    background: #3A09A2;\n    svg {\n        fill: ", ";\n    }\n\n    &:hover {\n        color: ", ";\n\n        svg {\n            fill: ", " !important;\n        }\n    }\n\n  .active {\n    color: #657eec;\n    background-color: #3A09A2;\n    svg {\n      fill: #657eec;\n    }\n\n    .active {\n        color: #657eec;\n\n        svg {\n            fill: #657eec;\n        }\n    }\n"], ["\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  height: ", "px;\n  padding: ", ";\n  font-family: Poppins;\n  font-style: normal;\n  font-size: 18px;\n  line-height: ", "px;\n  background-color: ",
+var MenuEntry = styled.div(templateObject_3$b || (templateObject_3$b = __makeTemplateObject(["\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  height: ", "px;\n  padding: ", ";\n  font-family: Poppins;\n  font-style: normal;\n  font-size: 18px;\n  line-height: ", "px;\n  background-color: ", ";\n  // box-shadow: ", ";\n  position: relative;\n  \n  &:before {\n    content: \"\";\n    position: absolute;\n    left: 0;\n    height: inherit;\n    width: 6px;\n    background-color: ", ";\n  }\n\n  a {\n    display: flex;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n  svg {\n    fill: ", ";\n    margin: 0 22px 0 24px;\n  }\n\n  &:hover {\n    color: #657eec;\n    background: #3A09A2;\n    svg {\n        fill: ", ";\n    }\n\n    &:hover {\n        color: ", ";\n\n        svg {\n            fill: ", " !important;\n        }\n    }\n\n  .active {\n    color: #657eec;\n    background-color: #3A09A2;\n    svg {\n      fill: #657eec;\n    }\n\n    .active {\n        color: #657eec;\n\n        svg {\n            fill: #657eec;\n        }\n    }\n"], ["\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  height: ", "px;\n  padding: ", ";\n  font-family: Poppins;\n  font-style: normal;\n  font-size: 18px;\n  line-height: ", "px;\n  background-color: ",
     ";\n  // box-shadow: ",
-    ";\n\n  &:before {\n    content: \"\";\n    position: absolute;\n    left: 0;\n    height: inherit;\n    width: 6px;\n    background-color: ",
+    ";\n  position: relative;\n  \n  &:before {\n    content: \"\";\n    position: absolute;\n    left: 0;\n    height: inherit;\n    width: 6px;\n    background-color: ",
     ";\n  }\n\n  a {\n    display: flex;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n  svg {\n    fill: ", ";\n    margin: 0 22px 0 24px;\n  }\n\n  &:hover {\n    color: #657eec;\n    background: #3A09A2;\n    svg {\n        fill: ", ";\n    }\n\n    &:hover {\n        color: ", ";\n\n        svg {\n            fill: ", " !important;\n        }\n    }\n\n  .active {\n    color: #657eec;\n    background-color: #3A09A2;\n    svg {\n      fill: #657eec;\n    }\n\n    .active {\n        color: #657eec;\n\n        svg {\n            fill: #657eec;\n        }\n    }\n"])), MENU_ENTRY_HEIGHT, function (_a) {
     var secondary = _a.secondary;
     return (secondary ? '0 16px 0 62px' : '0 16px 0 0');
@@ -4195,13 +4195,18 @@ var AccordionContent = styled.div(templateObject_2$m || (templateObject_2$m = __
     return theme.colors.white;
 });
 var Accordion = function (_a) {
-    var label = _a.label, status = _a.status, icon = _a.icon, isPushed = _a.isPushed; _a.pushNav; var _b = _a.initialOpenState, initialOpenState = _b === void 0 ? false : _b, children = _a.children, className = _a.className, isActive = _a.isActive; _a.isOpen; var handleClickToggle = _a.handleClickToggle;
+    var label = _a.label, status = _a.status, icon = _a.icon, isPushed = _a.isPushed; _a.pushNav; var _b = _a.initialOpenState, initialOpenState = _b === void 0 ? false : _b, children = _a.children, className = _a.className, isActive = _a.isActive, handleClickToggle = _a.handleClickToggle;
+    var _c = useState(initialOpenState), isOpen = _c[0], setIsOpen = _c[1];
+    var onClick = function () {
+        setIsOpen(!isOpen);
+        handleClickToggle && handleClickToggle();
+    };
     return (React.createElement(Container$2, null,
-        React.createElement(MenuEntry, { onClick: handleClickToggle, className: className, isActive: isActive, role: "button" },
+        React.createElement(MenuEntry, { onClick: onClick, className: className, isActive: isActive, role: "button" },
             icon,
             React.createElement(LinkLabelMemo, { isPushed: isPushed }, label),
             status && (React.createElement(LinkStatus, { color: status.color, fontSize: "14px" }, status.text))),
-        React.createElement(AccordionContent, { isOpen: initialOpenState, isPushed: isPushed, maxHeight: React.Children.count(children) * MENU_ENTRY_HEIGHT }, children)));
+        React.createElement(AccordionContent, { isOpen: isOpen, isPushed: isPushed, maxHeight: React.Children.count(children) * MENU_ENTRY_HEIGHT }, children)));
 };
 var templateObject_1$S, templateObject_2$m;
 
@@ -4236,6 +4241,7 @@ var PanelBody = function (_a) {
             setIsOpen(true);
         }
     };
+    console.log(isOpen);
     return (React.createElement(Container$3, null, links.map(function (entry) {
         var Icon = Icons$1[entry.icon];
         var iconElement = React.createElement(Icon, { color: theme.colors.linkText, width: "24px", mr: "8px" });
@@ -4244,11 +4250,11 @@ var PanelBody = function (_a) {
             : undefined;
         if (entry.items) {
             var itemsMatchIndex = entry.items.findIndex(function (item) { return item.href === location.pathname; });
-            entry.initialOpenState === true
+            var initialOpenState = entry.initialOpenState === true
                 ? entry.initialOpenState
                 : itemsMatchIndex >= 0;
-            return (React.createElement(Accordion, { key: entry.label, isPushed: isPushed, pushNav: pushNav, icon: iconElement, label: entry.label, status: entry.status, initialOpenState: isOpen, className: calloutClass, handleClickToggle: handleClickToggle, isActive: !isOpen && entry.items.some(function (item) { return item.href === location.pathname; }) }, isPushed &&
-                entry.items.map(function (item) { return (React.createElement(MenuEntry, { key: item.href, secondary: true, isActive: (item.href === location.pathname && isOpen), onClick: handleClick },
+            return (React.createElement(Accordion, { key: entry.label, isPushed: isPushed, pushNav: pushNav, icon: iconElement, label: entry.label, status: entry.status, initialOpenState: initialOpenState, className: calloutClass, handleClickToggle: handleClickToggle }, isPushed &&
+                entry.items.map(function (item) { return (React.createElement(MenuEntry, { key: item.href, secondary: true, isActive: (item.href === location.pathname), onClick: handleClick },
                     React.createElement(MenuLink, { href: item.href },
                         React.createElement(LinkLabelMemo, { isPushed: isPushed }, item.label),
                         item.status && (React.createElement(LinkStatus, { color: item.status.color, fontSize: "14px" }, item.status.text))))); })));

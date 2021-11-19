@@ -58,14 +58,18 @@ const Accordion: React.FC<Props> = ({
   children,
   className,
   isActive,
-  isOpen,
   handleClickToggle,
 }) => {
+  const [isOpen, setIsOpen] = useState(initialOpenState);
+  const onClick = () => {
+    setIsOpen(!isOpen)
+    handleClickToggle && handleClickToggle()
+  }
 
   return (
     <Container>
       <MenuEntry
-        onClick={handleClickToggle}
+        onClick={onClick}
         className={className}
         isActive={isActive}
         role="button"
@@ -80,7 +84,7 @@ const Accordion: React.FC<Props> = ({
         {/* {isOpen ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />} */}
       </MenuEntry>
       <AccordionContent
-        isOpen={initialOpenState}
+        isOpen={isOpen}
         isPushed={isPushed}
         maxHeight={React.Children.count(children) * MENU_ENTRY_HEIGHT}
       >

@@ -41,7 +41,8 @@ const MenuEntry = styled.div<Props>`
     isActive ? '#3A09A2' : '#300095'};
   // box-shadow: ${({ isActive, theme }) =>
     isActive ? `inset 4px 0px 0px ${theme.colors.primary}` : "none"};
-
+  position: relative;
+  
   &:before {
     content: "";
     position: absolute;

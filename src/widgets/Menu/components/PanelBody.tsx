@@ -46,6 +46,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
     }
   };
 
+console.log(isOpen)
   return (
     <Container>
       {links.map((entry) => {
@@ -72,19 +73,16 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
               icon={iconElement}
               label={entry.label}
               status={entry.status}
-              initialOpenState={isOpen}
+              initialOpenState={initialOpenState}
               className={calloutClass}
               handleClickToggle={handleClickToggle}
-              isActive={!isOpen && entry.items.some(
-                (item) => item.href === location.pathname
-              )}
             >
-              {isPushed &&
+              {isPushed && 
                 entry.items.map((item) => (
                   <MenuEntry
                     key={item.href}
                     secondary
-                    isActive={(item.href === location.pathname && isOpen)}
+                    isActive={(item.href === location.pathname)}
                     onClick={handleClick}
                   >
                     <MenuLink href={item.href}>
