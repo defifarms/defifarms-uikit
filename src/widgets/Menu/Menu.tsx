@@ -32,9 +32,6 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
   // border-bottom: solid 2px rgba(133, 133, 133, 0.1);
   z-index: 20;
   transform: translate3d(0, 0, 0);
-  ${({ theme }) => theme.mediaQueries.nav} {
-      background-color: ${({ theme }) => theme.nav.background};
-    }
 `;
 
 const BodyWrapper = styled.div`
