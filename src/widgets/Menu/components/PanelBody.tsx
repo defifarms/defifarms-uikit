@@ -21,6 +21,7 @@ const Container = styled.div`
   overflow-x: hidden;
   height: 100%;
   background-color: #300095;
+  border-top: 1px solid #6420F3;
   
   ::-webkit-scrollbar-thumb {
     background: ${({ theme }) =>

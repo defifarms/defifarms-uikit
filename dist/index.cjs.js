@@ -4234,7 +4234,7 @@ var MenuLink = function (_a) {
 };
 
 var Icons$1 = IconModule;
-var Container$3 = styled__default['default'].div(templateObject_1$T || (templateObject_1$T = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  background-color: #300095;\n  \n  ::-webkit-scrollbar-thumb {\n    background: ", ";\n    border-radius: 8px;\n  }\n"], ["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  background-color: #300095;\n  \n  ::-webkit-scrollbar-thumb {\n    background: ",
+var Container$3 = styled__default['default'].div(templateObject_1$T || (templateObject_1$T = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  background-color: #300095;\n  border-top: 1px solid #6420F3;\n  \n  ::-webkit-scrollbar-thumb {\n    background: ", ";\n    border-radius: 8px;\n  }\n"], ["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  background-color: #300095;\n  border-top: 1px solid #6420F3;\n  \n  ::-webkit-scrollbar-thumb {\n    background: ",
     ";\n    border-radius: 8px;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.isDark ? theme.colors.textSubtle : "#2C48C1";
@@ -4374,18 +4374,12 @@ var Panel = function (props) {
 var templateObject_1$W;
 
 var Wrapper$3 = styled__default['default'].div(templateObject_1$X || (templateObject_1$X = __makeTemplateObject(["\n  position: relative;\n  width: 100%;\n"], ["\n  position: relative;\n  width: 100%;\n"])));
-var StyledNav = styled__default['default'].nav(templateObject_2$o || (templateObject_2$o = __makeTemplateObject(["\n  position: fixed;\n  top: ", ";\n  left: 0;\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  background-color: ", ";\n  // border-bottom: solid 2px rgba(133, 133, 133, 0.1);\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n  ", " {\n      background-color: ", ";\n    }\n"], ["\n  position: fixed;\n  top: ", ";\n  left: 0;\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  background-color: ", ";\n  // border-bottom: solid 2px rgba(133, 133, 133, 0.1);\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n  ", " {\n      background-color: ", ";\n    }\n"])), function (_a) {
+var StyledNav = styled__default['default'].nav(templateObject_2$o || (templateObject_2$o = __makeTemplateObject(["\n  position: fixed;\n  top: ", ";\n  left: 0;\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  background-color: ", ";\n  // border-bottom: solid 2px rgba(133, 133, 133, 0.1);\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: fixed;\n  top: ", ";\n  left: 0;\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  background-color: ", ";\n  // border-bottom: solid 2px rgba(133, 133, 133, 0.1);\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"])), function (_a) {
     var showMenu = _a.showMenu;
     return (showMenu ? 0 : "-" + MENU_HEIGHT + "px");
 }, MENU_HEIGHT, function (_a) {
     var theme = _a.theme;
     return theme.colors.white;
-}, function (_a) {
-    var theme = _a.theme;
-    return theme.mediaQueries.nav;
-}, function (_a) {
-    var theme = _a.theme;
-    return theme.nav.background;
 });
 var BodyWrapper = styled__default['default'].div(templateObject_3$d || (templateObject_3$d = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n"], ["\n  position: relative;\n  display: flex;\n"])));
 var Inner$1 = styled__default['default'].div(templateObject_4$9 || (templateObject_4$9 = __makeTemplateObject(["\n    flex-grow: 1;\n    margin-top: ", ";\n    transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n    transform: translate3d(0, 0, 0);\n    max-width: 100%;\n    background-color: ", ";\n\n    ", " {\n        margin-left: ", ";\n        max-width: ", ";\n    }\n"], ["\n    flex-grow: 1;\n    margin-top: ", ";\n    transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n    transform: translate3d(0, 0, 0);\n    max-width: 100%;\n    background-color: ", ";\n\n    ", " {\n        margin-left: ", ";\n        max-width: ", ";\n    }\n"])), function (_a) {
