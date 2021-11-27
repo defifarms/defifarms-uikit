@@ -21,6 +21,7 @@ export interface MenuSubEntry {
     href: string;
     calloutClass?: string;
     status?: LinkStatus;
+    target?: string;
 }
 export interface MenuEntry {
     label: string;
