@@ -4244,7 +4244,6 @@ var PanelBody = function (_a) {
             setIsOpen(true);
         }
     };
-    console.log(isOpen);
     return (React.createElement(Container$3, null, links.map(function (entry) {
         var Icon = Icons$1[entry.icon];
         var iconElement = React.createElement(Icon, { color: theme.colors.linkText, width: "24px", mr: "8px" });
@@ -4258,7 +4257,7 @@ var PanelBody = function (_a) {
                 : itemsMatchIndex >= 0;
             return (React.createElement(Accordion, { key: entry.label, isPushed: isPushed, pushNav: pushNav, icon: iconElement, label: entry.label, status: entry.status, initialOpenState: initialOpenState, className: calloutClass, handleClickToggle: handleClickToggle }, isPushed &&
                 entry.items.map(function (item) { return (React.createElement(MenuEntry, { key: item.href, secondary: true, isActive: (item.href === location.pathname), onClick: handleClick },
-                    React.createElement(MenuLink, { href: item.href },
+                    React.createElement(MenuLink, { href: item.href, target: item.target },
                         React.createElement(LinkLabelMemo, { isPushed: isPushed }, item.label),
                         item.status && (React.createElement(LinkStatus, { color: item.status.color, fontSize: "14px" }, item.status.text))))); })));
         }
