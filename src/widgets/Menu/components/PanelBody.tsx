@@ -47,7 +47,6 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
     }
   };
 
-console.log(isOpen)
   return (
     <Container>
       {links.map((entry) => {
@@ -86,7 +85,7 @@ console.log(isOpen)
                     isActive={(item.href === location.pathname)}
                     onClick={handleClick}
                   >
-                    <MenuLink href={item.href}>
+                    <MenuLink href={item.href} target={item.target}>
                       <LinkLabel isPushed={isPushed}>{item.label}</LinkLabel>
                       {item.status && (
                         <LinkStatus color={item.status.color} fontSize="14px">
