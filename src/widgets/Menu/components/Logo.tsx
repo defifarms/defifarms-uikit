@@ -5,7 +5,9 @@ import Flex from "../../../components/Box/Flex";
 import {
   HamburgerIcon,
   LogoIcon as LogoWithText,
+  LogoMobile,
 } from "../icons";
+import LogoIcon from "../../../components/Svg/Icons/Logo";
 import MenuButton from "./MenuButton";
 import {
   MENU_HEIGHT,
@@ -18,6 +20,7 @@ interface Props {
   isDark: boolean;
   togglePush: () => void;
   href: string;
+  isMobile: boolean;
 }
 
 const blink = keyframes`
@@ -74,11 +77,15 @@ const MenuButtonMobile = styled(MenuButton)`
   }
 `;
 
-const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
+const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href, isMobile }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
-      <LogoWithText className="desktop-icon" isDark={isDark} />
+      {isMobile ? (
+        <LogoMobile />
+        
+      ) : <LogoWithText className="desktop-icon" isDark={isDark} />
+}
     </>
   );
 

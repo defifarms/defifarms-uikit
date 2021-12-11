@@ -4,6 +4,7 @@ interface Props {
     isDark: boolean;
     togglePush: () => void;
     href: string;
+    isMobile: boolean;
 }
 declare const _default: React.NamedExoticComponent<Props>;
 export default _default;
