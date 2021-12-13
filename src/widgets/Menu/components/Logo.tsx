@@ -6,6 +6,7 @@ import {
   HamburgerIcon,
   LogoIcon as LogoWithText,
   LogoMobile,
+  ChristmasIcon
 } from "../icons";
 import LogoIcon from "../../../components/Svg/Icons/Logo";
 import MenuButton from "./MenuButton";
@@ -21,6 +22,7 @@ interface Props {
   togglePush: () => void;
   href: string;
   isMobile: boolean;
+  isChristmas?: boolean;
 }
 
 const blink = keyframes`
@@ -77,14 +79,14 @@ const MenuButtonMobile = styled(MenuButton)`
   }
 `;
 
-const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href, isMobile }) => {
+const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href, isMobile, isChristmas }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
       {isMobile ? (
         <LogoMobile />
         
-      ) : <LogoWithText className="desktop-icon" isDark={isDark} />
+      ) : (isChristmas ? <ChristmasIcon /> : <LogoWithText className="desktop-icon" isDark={isDark} />)
 }
     </>
   );
