@@ -100,15 +100,16 @@ MenuEntry.defaultProps = {
   isActive: false,
 };
 
-const LinkStatus = styled(Text) <{ color: keyof Colors }>`
+const LinkStatus = styled(Text)<{ color: keyof Colors }>`
   border-radius: ${({ theme }) => theme.radii.default};
+  background-color: #EF5DA8;
   padding: 0 8px;
-  border: 2px solid;
+  border: 0px solid;
   border-color: ${({ theme, color }) => theme.colors[color]};
   box-shadow: none;
-  color: ${({ theme, color }) => theme.colors[color]};
+  color: ${({ theme, color }) => '#fff'};
   margin-left: 8px;
-`;
+`
 
 const LinkLabelMemo = React.memo(
   LinkLabel,
